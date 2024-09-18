@@ -1,0 +1,21 @@
+package nguyentien23706591;
+
+public class PhongLyThuyet extends PhongHoc {
+    private int mayChieu;
+
+    public PhongLyThuyet(String maPhong, String dayNha, double dienTich, int soBongDen, int mayChieu) {
+        super(maPhong, dayNha, dienTich, soBongDen);
+        this.mayChieu = mayChieu;
+    }
+
+    @Override
+    public boolean datChuan() {
+        return (dienTich / soBongDen) >= 10 && mayChieu >= 1;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", May chieu: " + mayChieu;
+    }
+
+}
